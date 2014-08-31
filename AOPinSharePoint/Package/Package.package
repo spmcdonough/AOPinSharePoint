@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="12a75c1c-4855-40e6-95ec-a2f9c4b779d9" solutionId="12a75c1c-4855-40e6-95ec-a2f9c4b779d9" resetWebServer="false" sharePointProductVersion="15.0" name="AOPinSharePoint" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="14dee2af-fd77-46ef-bf87-bdafab5455b2" />
+  </features>
+</package>

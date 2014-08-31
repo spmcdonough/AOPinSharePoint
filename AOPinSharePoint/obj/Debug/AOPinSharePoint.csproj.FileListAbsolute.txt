@@ -1,0 +1,5 @@
+E:\LocalDev\AOPinSharePoint\AOPinSharePoint\bin\Debug\AOPinSharePoint.dll
+E:\LocalDev\AOPinSharePoint\AOPinSharePoint\bin\Debug\AOPinSharePoint.pdb
+E:\LocalDev\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.csprojResolveAssemblyReference.cache
+E:\LocalDev\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.dll
+E:\LocalDev\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.pdb

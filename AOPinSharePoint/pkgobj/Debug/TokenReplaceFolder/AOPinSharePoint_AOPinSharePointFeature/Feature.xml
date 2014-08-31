@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Creator="Sean P McDonough" Description="Code to support the Leveraging AOP in SharePoint Custom Development Presentation" Id="4f398d30-81b1-4dad-87fb-9e73579215cd" Scope="Site" Title="AOPinSharePoint Web Parts">
+  <ElementManifests>
+    <ElementManifest Location="AopPart\Elements.xml" />
+    <ElementFile Location="AopPart\AopPart.webpart" />
+  </ElementManifests>
+</Feature>
