@@ -3,15 +3,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls.WebParts;
 
 
-namespace AOPinSharePoint.AopPart
+namespace AOPinSharePoint.AopExamplesWebPart
 {
-
-    
     [ToolboxItemAttribute(false)]
-    public class AopPart : WebPart
+    public class AopExamplesWebPart : WebPart
     {
         // Visual Studio might automatically update this path when you change the Visual Web Part project item.
-        private const string _ascxPath = @"~/_CONTROLTEMPLATES/15/AOPinSharePoint/AopPart/AopPartUserControl.ascx";
+        private const string _ascxPath = @"~/_CONTROLTEMPLATES/15/AOPinSharePoint/AopExamplesWebPart/AopExamplesWebPartUserControl.ascx";
 
         protected override void CreateChildControls()
         {
@@ -19,6 +17,4 @@ namespace AOPinSharePoint.AopPart
             Controls.Add(control);
         }
     }
-
-
 }

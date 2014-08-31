@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="AOPinSharePoint.AopExamplesWebPart.AopExamplesWebPart, AOPinSharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0670e2248928a50f" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">AOPinSharePoint - AopExamplesWebPart</property>
+        <property name="Description" type="string">Web Part Containing Demonstrations for the "Leveraging AOP in SharePoint Custom Development" Presentation by Sean P McDonough (sean@sharepointinterface.com)</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

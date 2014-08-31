@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="AopExamplesWebPart" List="113" Url="_catalogs/wp">
+    <File Path="AopExamplesWebPart\AopExamplesWebPart.webpart" Url="AOPinSharePoint_AopExamplesWebPart.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="AOP in SharePoint" />
+    </File>
+  </Module>
+</Elements>

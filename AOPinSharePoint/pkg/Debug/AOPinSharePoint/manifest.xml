@@ -3,12 +3,12 @@
   <Assemblies>
     <Assembly Location="AOPinSharePoint.dll" DeploymentTarget="GlobalAssemblyCache">
       <SafeControls>
-        <SafeControl Assembly="AOPinSharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0670e2248928a50f" Namespace="AOPinSharePoint.AopPart" TypeName="*" />
+        <SafeControl Assembly="AOPinSharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0670e2248928a50f" Namespace="AOPinSharePoint.AopExamplesWebPart" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>
   <TemplateFiles>
-    <TemplateFile Location="CONTROLTEMPLATES\AOPinSharePoint\AopPart\AopPartUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AOPinSharePoint\AopExamplesWebPart\AopExamplesWebPartUserControl.ascx" />
   </TemplateFiles>
   <FeatureManifests>
     <FeatureManifest Location="AOPinSharePoint_AOPinSharePointFeature\Feature.xml" />

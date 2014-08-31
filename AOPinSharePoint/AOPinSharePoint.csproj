@@ -14,6 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SandboxedSolution>False</SandboxedSolution>
+    <DontImportPostSharp>True</DontImportPostSharp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,10 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PostSharp">
+      <HintPath>..\packages\PostSharp.3.1.49\lib\net20\PostSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -53,25 +58,30 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AopExamplePart\AopPart.cs" />
-    <Compile Include="AopExamplePart\AopPartUserControl.ascx.cs">
-      <DependentUpon>AopPartUserControl.ascx</DependentUpon>
+    <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example03.cs" />
+    <Compile Include="AopExamplesWebPart\ExamplesWithoutAspects\Example01.cs" />
+    <Compile Include="AopExamplesWebPart\AopExamplesWebPart.cs" />
+    <Compile Include="AopExamplesWebPart\AopExamplesWebPartUserControl.ascx.cs">
+      <DependentUpon>AopExamplesWebPartUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AopExamplePart\AopPartUserControl.ascx.designer.cs">
-      <DependentUpon>AopPartUserControl.ascx.cs</DependentUpon>
+    <Compile Include="AopExamplesWebPart\AopExamplesWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>AopExamplesWebPartUserControl.ascx.cs</DependentUpon>
     </Compile>
+    <Compile Include="AopExamplesWebPart\ExamplesWithoutAspects\Example02.cs" />
+    <Compile Include="AopExamplesWebPart\Plumbing\LoggingSupport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AopExamplePart\AopPart.webpart" />
-    <None Include="AopExamplePart\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{5485fe83-6c3d-42fb-9bd0-3ee9f67bc275}</SharePointProjectItemId>
+    <None Include="AopExamplesWebPart\AopExamplesWebPart.webpart" />
+    <None Include="AopExamplesWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a4dafbe1-2a62-49a7-9709-843a194906a0}</SharePointProjectItemId>
     </None>
     <None Include="Features\AOPinSharePointFeature\AOPinSharePointFeature.feature">
       <FeatureId>{14dee2af-fd77-46ef-bf87-bdafab5455b2}</FeatureId>
     </None>
     <None Include="key.snk" />
+    <None Include="packages.config" />
     <None Include="Package\Package.package">
       <PackageId>{12a75c1c-4855-40e6-95ec-a2f9c4b779d9}</PackageId>
     </None>
@@ -80,11 +90,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AopExamplePart\AopPartUserControl.ascx" />
-    <Content Include="AopExamplePart\Elements.xml" />
+    <Content Include="AopExamplesWebPart\AopExamplesWebPartUserControl.ascx" />
+    <Content Include="AopExamplesWebPart\Elements.xml" />
     <Content Include="Features\AOPinSharePointFeature\AOPinSharePointFeature.Template.xml">
       <DependentUpon>AOPinSharePointFeature.feature</DependentUpon>
     </Content>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AopExamplesWebPart\Aspects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -92,4 +106,9 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="..\packages\PostSharp.3.1.49\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.3.1.49\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\packages\PostSharp.3.1.49\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\packages\PostSharp.3.1.49\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
 </Project>

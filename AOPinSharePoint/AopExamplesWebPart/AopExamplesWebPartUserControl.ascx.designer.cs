@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AOPinSharePoint.AopPart {
+namespace AOPinSharePoint.AopExamplesWebPart {
     
     
-    public partial class AopPartUserControl {
+    public partial class AopExamplesWebPartUserControl {
         
         /// <summary>
         /// Example01Button control.
@@ -20,6 +20,24 @@ namespace AOPinSharePoint.AopPart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Example01Button;
+        
+        /// <summary>
+        /// Example02Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Example02Button;
+        
+        /// <summary>
+        /// Example03Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Example03Button;
         
         /// <summary>
         /// ResultsTextbox control.
