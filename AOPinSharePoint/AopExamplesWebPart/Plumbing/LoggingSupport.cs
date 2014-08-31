@@ -17,20 +17,23 @@ namespace AOPinSharePoint.AopExamplesWebPart.Plumbing
     {
 
 
-        public static void WriteToLog(String message, TextBox logSource)
+        #region Methods
+
+
+        public static void WriteToLog(String message)
         {
             // If no entry depth is specified, assume it's a top level (i.e., depth 1)
             // entry and call the overload.
-            WriteToLog(message, logSource, 1);
+            WriteToLog(message, 1);
         }
 
 
-        public static void WriteToLog(String message, TextBox logSource, Int32 depth)
+        public static void WriteToLog(String message, Int32 depth)
         {
+            String textboxContent = LoggingTextBox.Text;
             StringBuilder logEntryBuilder = new StringBuilder();
             
             // Format the log entry to distinguish it from the functional entries
-            logEntryBuilder.Append(new String(' ', depth * 3));
             logEntryBuilder.Append(new String('+', depth * 3));
             logEntryBuilder.Append(message);
 
@@ -41,7 +44,26 @@ namespace AOPinSharePoint.AopExamplesWebPart.Plumbing
                 logEntryBuilder.Append("\n");
             }
 
-            logSource.Text += logEntryBuilder.ToString();
+            textboxContent += logEntryBuilder.ToString();
+            LoggingTextBox.Text = textboxContent;
         }
+
+
+        #endregion Methods
+
+
+        #region Properties
+
+
+        /// <summary>
+        /// Maintains a reference to the web part's Textbox so log entries can be
+        /// written to it.
+        /// </summary>
+        public static TextBox LoggingTextBox { get; set; }
+
+
+        #endregion Properties
+
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Web.UI;
 using AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects;
 using AOPinSharePoint.AopExamplesWebPart.ExamplesWithoutAspects;
+using AOPinSharePoint.AopExamplesWebPart.Plumbing;
 
 
 namespace AOPinSharePoint.AopExamplesWebPart
@@ -17,11 +18,19 @@ namespace AOPinSharePoint.AopExamplesWebPart
     {
 
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Take care of a few housekeeping items - like letting the various plumbing
+            // pieces know about the web part's textbox.
+            LoggingSupport.LoggingTextBox = LogTextbox;
+        }
+
+
         protected void Example01Button_Click(object sender, EventArgs e)
         {
             ResultsTextbox.Text = String.Empty;
             var exampleCode = new Example01(ResultsTextbox);
-            exampleCode.GenerateExampleOutput();
+            exampleCode.WriteExampleOutput();
         }
 
 
@@ -29,7 +38,7 @@ namespace AOPinSharePoint.AopExamplesWebPart
         {
             ResultsTextbox.Text = String.Empty;
             var exampleCode = new Example02(ResultsTextbox);
-            exampleCode.GenerateExampleOutput();
+            exampleCode.WriteExampleOutput();
         }
 
 
@@ -37,7 +46,7 @@ namespace AOPinSharePoint.AopExamplesWebPart
         {
             ResultsTextbox.Text = String.Empty;
             var exampleCode = new Example03(ResultsTextbox);
-            exampleCode.GenerateExampleOutput();
+            exampleCode.WriteExampleOutput();
         }
 
 

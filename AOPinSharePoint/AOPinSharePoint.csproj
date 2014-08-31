@@ -58,6 +58,7 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AopExamplesWebPart\Aspects\LoggingToTextboxAspect.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example03.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesWithoutAspects\Example01.cs" />
     <Compile Include="AopExamplesWebPart\AopExamplesWebPart.cs" />
@@ -97,9 +98,7 @@
     </Content>
     <Content Include="README.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AopExamplesWebPart\Aspects\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

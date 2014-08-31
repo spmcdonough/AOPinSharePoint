@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.UI.WebControls;
+using AOPinSharePoint.AopExamplesWebPart.Aspects;
 
 
 namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
@@ -10,6 +11,7 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
     /// Example03: demonstrates a simpler way to develop cross-cutting logging
     /// code with the creation and usage of a simple aspect.
     /// </summary>
+    [LoggingToTextboxAspect]
     internal class Example03
     {
 
@@ -39,7 +41,7 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
         #region Example Methods
 
 
-        public void GenerateExampleOutput()
+        public void WriteExampleOutput()
         {
             _outputTextBox.Text = _outputTextBox.Text + GenerateLine1();
             _outputTextBox.Text = _outputTextBox.Text + GenerateLine2();
@@ -51,35 +53,35 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
 
         private String GenerateLine1()
         {
-            String whatToWrite = "It is by caffeine alone that I set my mind in motion.\n\n";
+            String whatToWrite = "It is by caffeine alone that I set my mind in motion.\n";
             return whatToWrite;
         }
 
 
         private String GenerateLine2()
         {
-            String whatToWrite = "It is by the beans of Java that thoughts acquire speed,\n\n";
+            String whatToWrite = "It is by the beans of Java that thoughts acquire speed,\n";
             return whatToWrite;
         }
 
 
         private String GenerateLine3()
         {
-            String whatToWrite = "the hands acquire shakes,\n\n";
+            String whatToWrite = "  the hands acquire shakes,\n";
             return whatToWrite;
         }
 
 
         private String GenerateLine4()
         {
-            String whatToWrite = "the shakes become a warning.\n\n";
+            String whatToWrite = "  the shakes become a warning.\n";
             return whatToWrite;
         }
 
 
         private String GenerateLine5()
         {
-            String whatToWrite = "It is by caffeine alone I set my mind in motion.\n\n";
+            String whatToWrite = "It is by caffeine alone I set my mind in motion.\n";
             return whatToWrite;
         }
 
