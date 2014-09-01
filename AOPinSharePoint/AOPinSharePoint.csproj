@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="AopExamplesWebPart\ExamplesWithoutAspects\Example02.cs" />
     <Compile Include="AopExamplesWebPart\Plumbing\LoggingSupport.cs" />
+    <Compile Include="AopExamplesWebPart\Unrelated Sample Code\NotPartOfExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

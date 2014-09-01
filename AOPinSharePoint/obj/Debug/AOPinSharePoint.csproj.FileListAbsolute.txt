@@ -11,3 +11,4 @@ E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.dll
 E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.pdb
 E:\GitRepos\AOPinSharePoint\AOPinSharePoint\bin\Debug\AOPinSharePoint.pssym
 E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.dll.postsharp
+E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.csprojResolveAssemblyReference.cache
