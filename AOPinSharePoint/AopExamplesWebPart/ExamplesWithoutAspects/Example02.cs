@@ -45,26 +45,12 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesWithoutAspects
         public void WriteExampleOutput()
         {
             LoggingSupport.WriteToLog("Entering Method WriteExampleOutput");
-            
-            // Method 1
-            String outputToWrite = GenerateLine1();
-            _outputTextBox.Text += outputToWrite;
 
-            // Method 2
-            outputToWrite = GenerateLine2();
-            _outputTextBox.Text += outputToWrite;
-
-            // Method 3
-            outputToWrite = GenerateLine3();
-            _outputTextBox.Text += outputToWrite;
-
-            // Method 4
-            outputToWrite = GenerateLine4();
-            _outputTextBox.Text += outputToWrite;
-
-            // Method 5
-            outputToWrite = GenerateLine5();
-            _outputTextBox.Text += outputToWrite;
+            _outputTextBox.Text += GenerateLine1();
+            _outputTextBox.Text += GenerateLine2();
+            _outputTextBox.Text += GenerateLine3();
+            _outputTextBox.Text += GenerateLine4();
+            _outputTextBox.Text += GenerateLine5();
 
             LoggingSupport.WriteToLog("Exiting Method WriteExampleOutput");
         }
