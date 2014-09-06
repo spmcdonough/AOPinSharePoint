@@ -42,6 +42,10 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PostSharp">
       <HintPath>..\packages\PostSharp.3.1.49\lib\net20\PostSharp.dll</HintPath>
       <Private>True</Private>
@@ -58,8 +62,11 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example05.cs" />
     <Compile Include="AopExamplesWebPart\Aspects\LoggingToTextboxAspect.cs" />
+    <Compile Include="AopExamplesWebPart\Aspects\TimingAspect.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example03.cs" />
+    <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example04.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesWithoutAspects\Example01.cs" />
     <Compile Include="AopExamplesWebPart\AopExamplesWebPart.cs" />
     <Compile Include="AopExamplesWebPart\AopExamplesWebPartUserControl.ascx.cs">

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Symbols xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Class Class="#1=T:[AOPinSharePoint]AOPinSharePoint.AopExamplesWebPart.Aspects.LoggingToTextboxAspect">
-    <Instance Declaration="#2=T:[AOPinSharePoint]AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects.Example03" Id="a52b110073a9a3a1">
+    <Instance Declaration="#2=T:[AOPinSharePoint]AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects.Example03" Id="a52b11001d3981b2">
       <Target Target="#3=M:[AOPinSharePoint]AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects.Example03::#ctor(System.Web.UI.WebControls.TextBox)">
         <JoinPoint Description="#4=Wrapped by advice(s) OnEntry, OnExit" />
       </Target>
@@ -21,6 +21,13 @@
         <JoinPoint Description="#4" />
       </Target>
       <Target Target="#10=M:[AOPinSharePoint]AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects.Example03::GenerateLine5()">
+        <JoinPoint Description="#4" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#11=T:[AOPinSharePoint]AOPinSharePoint.AopExamplesWebPart.Aspects.TimingAspect">
+    <Instance Declaration="#12=M:[AOPinSharePoint]AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects.Example04::FetchChuckNorrisJoke()" Id="a52b11009e595be6">
+      <Target>
         <JoinPoint Description="#4" />
       </Target>
     </Instance>

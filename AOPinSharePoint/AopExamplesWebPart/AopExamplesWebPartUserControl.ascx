@@ -14,7 +14,16 @@
             <asp:Button ID="Example02Button" runat="server" Text="Ex #2: Feature Code with Logging" Width="100%" OnClick="Example02Button_Click" Font-Names="Corbel" />        
         </div>
         <div style="padding-top: 5px;">
-            <asp:Button ID="Example03Button" runat="server" Text="Ex #3: Simplified Logging With Aspect" Width="100%" OnClick="Example03Button_Click" Font-Names="Corbel" />
+            <asp:Button ID="Example03Button" runat="server" Text="Ex #3: Simplified Logging with Aspect" Width="100%" OnClick="Example03Button_Click" Font-Names="Corbel" />
+        </div>
+        <div style="padding-top: 5px;">
+            <asp:Button ID="Example04Button" runat="server" Text="Ex #4: Cheap and Easy Timing" Width="100%" OnClick="Example04Button_Click" Font-Names="Corbel" />
+        </div>
+        <div style="padding-top: 5px;">
+            <asp:Button ID="Example05Button" runat="server" Text="Ex #5: Handling Nasty Situations" Width="100%" OnClick="Example05Button_Click" Font-Names="Corbel" />
+        </div>
+        <div style="padding-top: 5px;">
+            <asp:Button ID="Example06Button" runat="server" Text="Ex #6: Caching is King!" Width="100%" OnClick="Example06Button_Click" Font-Names="Corbel" />
         </div>
     </div>
 

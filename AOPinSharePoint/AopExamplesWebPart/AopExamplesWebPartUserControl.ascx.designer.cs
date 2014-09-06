@@ -40,6 +40,33 @@ namespace AOPinSharePoint.AopExamplesWebPart {
         protected global::System.Web.UI.WebControls.Button Example03Button;
         
         /// <summary>
+        /// Example04Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Example04Button;
+        
+        /// <summary>
+        /// Example05Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Example05Button;
+        
+        /// <summary>
+        /// Example06Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Example06Button;
+        
+        /// <summary>
         /// ResultsTextbox control.
         /// </summary>
         /// <remarks>

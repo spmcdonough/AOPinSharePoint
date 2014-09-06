@@ -9,6 +9,8 @@ E:\GitRepos\AOPinSharePoint\AOPinSharePoint\bin\Debug\PostSharp.dll
 E:\GitRepos\AOPinSharePoint\AOPinSharePoint\bin\Debug\PostSharp.xml
 E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.dll
 E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.pdb
+E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.csprojResolveAssemblyReference.cache
+E:\GitRepos\AOPinSharePoint\AOPinSharePoint\bin\Debug\Newtonsoft.Json.dll
+E:\GitRepos\AOPinSharePoint\AOPinSharePoint\bin\Debug\Newtonsoft.Json.xml
 E:\GitRepos\AOPinSharePoint\AOPinSharePoint\bin\Debug\AOPinSharePoint.pssym
 E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.dll.postsharp
-E:\GitRepos\AOPinSharePoint\AOPinSharePoint\obj\Debug\AOPinSharePoint.csprojResolveAssemblyReference.cache

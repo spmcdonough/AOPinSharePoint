@@ -7,7 +7,6 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesWithoutAspects
 {
 
 
-
     /// <summary>
     /// Example02: includes the same code as Example01, but we've introduced
     /// logging code so that we can follow the chain of execution within the
