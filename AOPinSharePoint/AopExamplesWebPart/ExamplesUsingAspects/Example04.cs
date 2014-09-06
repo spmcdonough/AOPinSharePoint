@@ -13,7 +13,7 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
     /// <summary>
     /// Example04: another method boundary aspect that demonstrates two things.
     /// First, it shows how some simple timing and performance requirements
-    /// could be addressed with AOP. Second, it highlights how objects and state
+    /// can be addressed with AOP. Second, it highlights how objects and state
     /// can be passed between method boundary aspect invocations.
     /// </summary>
     internal class Example04
