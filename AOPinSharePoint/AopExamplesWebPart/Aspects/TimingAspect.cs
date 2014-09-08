@@ -8,6 +8,13 @@ namespace AOPinSharePoint.AopExamplesWebPart.Aspects
 {
 
 
+    /// <summary>
+    /// This aspect performs simple end-to-end method execution timing using
+    /// the <c>StopWatch</c> class in the System.Diagnostics namespace. A 
+    /// <c>StopWatch</c> is started when the method enters, the <c>StopWatch</c>
+    /// is stopped on method exit, and the time spent in the method is written
+    /// to the log window.
+    /// </summary>
     [Serializable]
     public class TimingAspect : OnMethodBoundaryAspect
     {
@@ -26,7 +33,7 @@ namespace AOPinSharePoint.AopExamplesWebPart.Aspects
             var stopwatch = new Stopwatch();
             stopwatch.Start();
             args.MethodExecutionTag = stopwatch;
-            LoggingSupport.WriteToLog("Stopwatch started.");
+            LoggingSupport.WriteToLog(String.Format("Stopwatch started for '{0}' method.", args.Method.Name));
         }
 
 
@@ -38,8 +45,8 @@ namespace AOPinSharePoint.AopExamplesWebPart.Aspects
         {
             var stopWatch = args.MethodExecutionTag as Stopwatch;
             stopWatch.Stop();
-            LoggingSupport.WriteToLog("Stopwatch stopped. Elapsed time: " + 
-                stopWatch.ElapsedMilliseconds + "ms");
+            LoggingSupport.WriteToLog(String.Format("Stopwatch stopped for '{0}' method. Elapsed time: {1} ms.", 
+                args.Method.Name, stopWatch.ElapsedMilliseconds));
         }
 
 

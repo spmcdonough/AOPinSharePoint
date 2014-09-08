@@ -62,6 +62,8 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AopExamplesWebPart\Aspects\CachedPropertyAspect.cs" />
+    <Compile Include="AopExamplesWebPart\Aspects\ExceptionHandlingAspect.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example05.cs" />
     <Compile Include="AopExamplesWebPart\Aspects\LoggingToTextboxAspect.cs" />
     <Compile Include="AopExamplesWebPart\Aspects\TimingAspect.cs" />
