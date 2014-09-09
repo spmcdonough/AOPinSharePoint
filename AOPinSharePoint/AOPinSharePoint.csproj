@@ -62,13 +62,14 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AopExamplesWebPart\Aspects\CachedPropertyAspect.cs" />
+    <Compile Include="AopExamplesWebPart\Aspects\RemoteReadOnlyPropertyAspect.cs" />
     <Compile Include="AopExamplesWebPart\Aspects\ExceptionHandlingAspect.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example05.cs" />
     <Compile Include="AopExamplesWebPart\Aspects\LoggingToTextboxAspect.cs" />
     <Compile Include="AopExamplesWebPart\Aspects\TimingAspect.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example03.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example04.cs" />
+    <Compile Include="AopExamplesWebPart\ExamplesUsingAspects\Example06.cs" />
     <Compile Include="AopExamplesWebPart\ExamplesWithoutAspects\Example01.cs" />
     <Compile Include="AopExamplesWebPart\AopExamplesWebPart.cs" />
     <Compile Include="AopExamplesWebPart\AopExamplesWebPartUserControl.ascx.cs">
@@ -79,6 +80,7 @@
       <DependentUpon>AopExamplesWebPartUserControl.ascx.cs</DependentUpon>
     </Compile>
     <Compile Include="AopExamplesWebPart\ExamplesWithoutAspects\Example02.cs" />
+    <Compile Include="AopExamplesWebPart\Plumbing\IcndbMethods.cs" />
     <Compile Include="AopExamplesWebPart\Plumbing\LoggingSupport.cs" />
     <Compile Include="AopExamplesWebPart\Unrelated Sample Code\NotPartOfExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

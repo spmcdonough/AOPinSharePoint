@@ -1,9 +1,7 @@
 ﻿using System;
-using System.IO;
-using System.Net;
 using System.Web.UI.WebControls;
 using AOPinSharePoint.AopExamplesWebPart.Aspects;
-using Newtonsoft.Json.Linq;
+using AOPinSharePoint.AopExamplesWebPart.Plumbing;
 
 
 namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
@@ -45,31 +43,16 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
         #region Example Methods
 
 
-        [TimingAspect]
-        private String FetchChuckNorrisJoke()
+        public void WriteExampleOutput()
         {
-            // URL for the Internet Chuck Norris Database to get a nerdy joke
-            const String icndbUrl = "http://api.icndb.com/jokes/random?limitTo=[nerdy]";
-            String theJoke;
-            
-            // Make the HTTP call, process the JSON response, and extract the joke
-            // so that it can be shown in the output "window."
-            var requestJoke = WebRequest.Create(icndbUrl);
-            var response = (HttpWebResponse) requestJoke.GetResponse();
-            using (var sr = new StreamReader(response.GetResponseStream()))
-            {
-                var jsonResponse = sr.ReadToEnd();
-                JObject jokeObject = JObject.Parse(jsonResponse);
-                theJoke = jokeObject["value"]["joke"].ToString();
-            }
-
-            return theJoke;
+            _outputTextBox.Text += GetJoke();
         }
 
 
-        public void WriteExampleOutput()
+        [TimingAspect]
+        private String GetJoke()
         {
-            _outputTextBox.Text += FetchChuckNorrisJoke();
+            return IcndbMethods.FetchChuckNorrisJoke();
         }
 
 

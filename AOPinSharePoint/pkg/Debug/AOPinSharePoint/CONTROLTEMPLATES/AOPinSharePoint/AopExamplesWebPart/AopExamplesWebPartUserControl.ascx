@@ -23,7 +23,7 @@
             <asp:Button ID="Example05Button" runat="server" Text="Ex #5: Handling Nasty Situations" Width="100%" OnClick="Example05Button_Click" Font-Names="Corbel" />
         </div>
         <div style="padding-top: 5px;">
-            <asp:Button ID="Example06Button" runat="server" Text="Ex #6: Caching is King!" Width="100%" OnClick="Example06Button_Click" Font-Names="Corbel" />
+            <asp:Button ID="Example06Button" runat="server" Text="Ex #6: Some Help with the Remote" Width="100%" OnClick="Example06Button_Click" Font-Names="Corbel" />
         </div>
     </div>
 

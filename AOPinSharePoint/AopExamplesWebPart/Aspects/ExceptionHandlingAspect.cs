@@ -1,6 +1,7 @@
 ﻿using System;
 using AOPinSharePoint.AopExamplesWebPart.Plumbing;
 using PostSharp.Aspects;
+using PostSharp.Aspects.Internals;
 
 
 namespace AOPinSharePoint.AopExamplesWebPart.Aspects
@@ -45,11 +46,9 @@ namespace AOPinSharePoint.AopExamplesWebPart.Aspects
                     args.Method.Name, ex.Message));
 
                 // Chances are the method we're intercepting passes back a
-                // String; if so, assign something funny for return.
-                if (args.ReturnValue is String)
-                {
-                    args.ReturnValue = "Oops!";
-                }
+                // String, so assign something funny for return.
+                args.ReturnValue = "When Chuck Norris calls a web service, the " +
+                    "network connection is optional. The service still replies.";
             }
         }
 

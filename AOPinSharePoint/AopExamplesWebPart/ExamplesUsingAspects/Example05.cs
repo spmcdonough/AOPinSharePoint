@@ -1,9 +1,7 @@
 ﻿using System;
-using System.IO;
-using System.Net;
 using System.Web.UI.WebControls;
 using AOPinSharePoint.AopExamplesWebPart.Aspects;
-using Newtonsoft.Json.Linq;
+using AOPinSharePoint.AopExamplesWebPart.Plumbing;
 
 
 namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
@@ -11,7 +9,12 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
 
 
     /// <summary>
-    /// Example05: 
+    /// Example05: this example demonstrates how a MethodInterceptionAspect
+    /// operates and can be used for something like exception handling -
+    /// even "creative" exception handling. Method Interception Aspects run
+    /// in place of the method they are applied to; the aspect can (and
+    /// usually does) call the method in some way, but it also adds some
+    /// value to the call.
     /// </summary>
     public class Example05
     {
@@ -39,7 +42,23 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
         #endregion Constructor(s)
 
 
+        #region Example Methods
 
+
+        public void WriteExampleOutput()
+        {
+            _outputTextBox.Text += GetJoke();
+        }
+
+
+        [ExceptionHandlingAspect]
+        private String GetJoke()
+        {
+            return IcndbMethods.FetchChuckNorrisJoke();
+        }
+
+
+        #endregion Example Methods
 
 
     }

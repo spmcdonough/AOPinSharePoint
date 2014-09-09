@@ -58,16 +58,16 @@ namespace AOPinSharePoint.AopExamplesWebPart
 
         protected void Example05Button_Click(object sender, EventArgs e)
         {
-//            ResultsTextbox.Text = String.Empty;
-//            var exampleCode = new Example03(ResultsTextbox);
-//            exampleCode.WriteExampleOutput();
+            ResultsTextbox.Text = String.Empty;
+            var exampleCode = new Example05(ResultsTextbox);
+            exampleCode.WriteExampleOutput();
         }
 
         protected void Example06Button_Click(object sender, EventArgs e)
         {
-//            ResultsTextbox.Text = String.Empty;
-//            var exampleCode = new Example03(ResultsTextbox);
-//            exampleCode.WriteExampleOutput();
+            ResultsTextbox.Text = String.Empty;
+            var exampleCode = new Example06(ResultsTextbox);
+            exampleCode.WriteExampleOutput();
         }
 
     }
