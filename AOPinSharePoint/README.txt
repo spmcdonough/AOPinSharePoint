@@ -11,7 +11,7 @@ PostSharp was used in the creation of this solution, you can obtain a free
 version which will allow you to run all examples and create your own aspects
 at http://www.postsharp.net/purchase (PostSharp Express).
 
-This solution was last updated on August 31, 2014. For more information,
+This solution was last updated on September 9, 2014. For more information,
 contact Sean McDonough at either sean@sharepointinterface.com or through
 sean@bitstreamfoundry.com. In addition, the latest link to this solution
 will always be found at http://sharepointinterface.com/resources/presentations/

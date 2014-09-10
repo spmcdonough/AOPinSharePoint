@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.UI.WebControls;
 using AOPinSharePoint.AopExamplesWebPart.Aspects;
+using Microsoft.SharePoint;
 
 
 namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
@@ -60,8 +61,15 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
         {
             get
             {
-                //TODO: REPLACE WITH CALL TO CSWP SITE COLLECTION
-                return 27;
+                Int32 itemCount = 0;
+                using (SPSite otherSiteCollection = new SPSite("http://sp2013-dev:18580/"))
+                {
+                    SPWeb rootWeb = otherSiteCollection.RootWeb;
+                    SPList btMusicList = rootWeb.GetList("/BunkerTuneage");
+                    itemCount = btMusicList.ItemCount;
+                }
+
+                return itemCount;
             }
         }
 
