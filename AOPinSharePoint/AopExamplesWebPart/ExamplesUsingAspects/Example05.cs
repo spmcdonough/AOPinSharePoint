@@ -54,6 +54,10 @@ namespace AOPinSharePoint.AopExamplesWebPart.ExamplesUsingAspects
         [ExceptionHandlingAspect]
         private String GetJoke()
         {
+            // Simulate an exception instead of actually trying to fetch 
+            // a joke.
+            // throw new Exception("Sorry - lost network connection");
+
             return IcndbMethods.FetchChuckNorrisJoke();
         }
 
